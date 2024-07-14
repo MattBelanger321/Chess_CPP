@@ -8,12 +8,14 @@ namespace chess::board {
     class piece_t {
     public:
         piece_t( piece_type type, colour_t colour );
+        bool has_moved();
 
         friend std::ostream & operator<<( std::ostream & os, const piece_t & s );
 
     private:
         piece_type type;
         colour_t   colour;
+        bool       piece_has_moved;  // set if this piece was placed on a board and was moved from its original position
 
         friend class board;  // board can modify piece
     };

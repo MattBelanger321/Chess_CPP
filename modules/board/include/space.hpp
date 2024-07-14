@@ -14,7 +14,8 @@ namespace chess::board {
         space( file_t file, rank_t rank, colour_t colour, std::optional< piece_t > piece );
         space() {}
 
-        std::string coordinate() const;
+        std::optional< piece_t > const & get_piece() const;
+        std::string                      coordinate() const;
 
         friend std::ostream & operator<<( std::ostream & os, const space & s );
 

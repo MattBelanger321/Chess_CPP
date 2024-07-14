@@ -44,7 +44,8 @@ namespace chess::board {
             return false;  // there is no piece to move
         }
 
-        dst.piece = src.piece;
+        dst.piece                  = src.piece;
+        dst.piece->piece_has_moved = true;
         src.piece.reset();
 
         return true;

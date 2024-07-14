@@ -8,6 +8,8 @@ namespace chess::board {
     {
     }
 
+    std::optional< piece_t > const & space::get_piece() const { return piece; }
+
     std::string space::coordinate() const { return file_to_string( file ) + rank_to_string( rank ); }
 
 }  // namespace chess::board
