@@ -11,5 +11,5 @@ add_subdirectory("modules/board")
 # add_subdirectory("modules/display")
 
 # Samples
-add_subdirectory("samples/board_construct")
+add_subdirectory("samples/board_sample")
 
