@@ -12,7 +12,7 @@ namespace chess::board {
     constexpr int RANKS = 8;
     constexpr int FILES = 8;
 
-    struct column : std::array< space, RANKS > {  // each collumn is 8 spaces
+    struct column : private std::array< space, RANKS > {  // each collumn is 8 spaces
         using underlying_arr = std::array< space, RANKS >;
         // operator[] overloads
         space const & operator[]( rank_t rank ) const
