@@ -25,6 +25,31 @@ namespace chess::board {
         return spaces;
     }
 
+    space & board::select( file_t file, rank_t rank )
+    {
+        if ( static_cast< int >( file ) < 1 || static_cast< int >( file ) > FILES ) {
+            throw std::runtime_error( "FILE OUT OF BOUNDS, CANNOT SELECT SPACE" );
+        }
+
+        if ( static_cast< int >( rank ) < 1 || static_cast< int >( rank ) > RANKS ) {
+            throw std::runtime_error( "RANK OUT OF BOUNDS, CANNOT SELECT SPACE" );
+        }
+
+        return ( *this )[file][rank];
+    }
+
+    bool board::move( space & src, space & dst )
+    {
+        if ( !src.piece.has_value() ) {
+            return false;  // there is no piece to move
+        }
+
+        dst.piece = src.piece;
+        src.piece.reset();
+
+        return true;
+    }
+
     std::optional< piece_t > board::default_piece( file_t const & file, rank_t const & rank )
     {
         if ( rank == rank_t::one ) {

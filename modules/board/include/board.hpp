@@ -37,11 +37,13 @@ namespace chess::board {
     public:
         board();
 
-        space select( rank_t rank, file_t file );  // returns the space specified
-        bool  move( space & src, space & dst );  // moves the piece from src to dst, returns false is there is no piece
-                                                 // on src, true otherwise
+        // returns the space specified
+        space & select( file_t file, rank_t rank );
 
-        // operator[] overloads
+        static bool move( space & src, space & dst );  // moves the piece from src to dst, returns false if there
+                                                       // is no piece on src, true otherwise
+
+        // returns a space when double indexed
         column const & operator[]( file_t file ) const { return spaces[static_cast< int >( file ) - 1]; }
         column &       operator[]( file_t file ) { return spaces[static_cast< int >( file ) - 1]; }
 
