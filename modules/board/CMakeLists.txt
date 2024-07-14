@@ -4,7 +4,12 @@ project(board LANGUAGES CXX)
 
 add_library(${PROJECT_NAME}
     "include/board.hpp"
+	"include/space.hpp"
+	"include/piece.hpp"
+	"include/board_types.hpp"
 
+	"src/piece.cpp"
+    "src/space.cpp"
     "src/board.cpp"
 )
 
