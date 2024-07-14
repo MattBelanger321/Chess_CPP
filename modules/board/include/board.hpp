@@ -40,6 +40,7 @@ namespace chess::board {
         // returns the space specified
         space & select( file_t file, rank_t rank );
 
+        // sets the has_moved flag on the src space if it has a piece
         static bool move( space & src, space & dst );  // moves the piece from src to dst, returns false if there
                                                        // is no piece on src, true otherwise
 
