@@ -8,7 +8,7 @@ project(Chess_Cpp)
 
 add_subdirectory("modules/chess")
 add_subdirectory("modules/board")
-# add_subdirectory("modules/display")
+add_subdirectory("modules/display")
 
 # Samples
 add_subdirectory("samples/board_sample")
