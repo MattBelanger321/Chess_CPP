@@ -32,5 +32,4 @@ target_link_libraries(${PROJECT_NAME}
 	imgui::imgui
     glfw::glfw
 	GLEW::glew_s
-	
 )
