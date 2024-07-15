@@ -6,7 +6,7 @@ project(Chess_Cpp)
 
 # Modules
 
-# add_subdirectory("modules/game")
+add_subdirectory("modules/chess")
 add_subdirectory("modules/board")
 # add_subdirectory("modules/display")
 
