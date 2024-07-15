@@ -1,3 +1,5 @@
 build/
 .cache/
 *.bkp
+modules/display/bindings/include
+modules/display/bindings/src

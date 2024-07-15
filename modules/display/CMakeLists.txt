@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.5)
 
+add_subdirectory("bindings")
+
 project(display LANGUAGES CXX)
+
+
 
 add_library(${PROJECT_NAME}
     "include/display.hpp"
@@ -19,5 +23,6 @@ target_include_directories(${PROJECT_NAME}
 )
 
 target_link_libraries(${PROJECT_NAME}
-    PRIVATE
+    PUBLIC
+    glfw_bindings
 )
