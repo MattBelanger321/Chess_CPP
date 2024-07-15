@@ -12,4 +12,5 @@ add_subdirectory("modules/display")
 
 # Samples
 add_subdirectory("samples/board_sample")
+add_subdirectory("samples/gui_sample")
 
