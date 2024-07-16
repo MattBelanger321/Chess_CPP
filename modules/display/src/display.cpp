@@ -5,10 +5,11 @@ namespace chess::display {
 
     void display::launch_window()
     {
-        std::function< void() > render_function = [&]() { render(); };
+
         // clang-format off
         render_thread = std::thread(  
-            [&]() {                   
+            [&]() {      
+				std::function< void() > render_function = [&]() { render(); };
                 run( render_function );
             }  
         );
