@@ -1,4 +1,4 @@
-#include <imgui_initalizer.hpp>
+#include <imgui_initializer.hpp>
 
 #include <iostream>
 
@@ -53,7 +53,7 @@ namespace chess::display {
         return true;
     }
 
-    void imgui_initalizer::cleanup()
+    void imgui_initalizer::stop()
     {
         // Cleanup
         ImGui_ImplOpenGL3_Shutdown();
@@ -106,6 +106,6 @@ namespace chess::display {
         main_loop( render_function );
     }
 
-    imgui_initalizer::~imgui_initalizer() { cleanup(); }
+    imgui_initalizer::~imgui_initalizer() { stop(); }
 
 }  // namespace chess::display

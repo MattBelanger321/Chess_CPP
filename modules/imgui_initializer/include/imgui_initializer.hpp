@@ -1,5 +1,5 @@
-#ifndef __CHESS__DISPLAY__INITALIZER__HPP__
-#define __CHESS__DISPLAY__INITALIZER__HPP__
+#ifndef __CHESS__IMGUI_INIT__INITALIZER__HPP__
+#define __CHESS__IMGUI_INIT__INITALIZER__HPP__
 
 #include <imgui.h>
 
@@ -20,6 +20,7 @@ namespace chess::display {
 
         bool init();
         void run( std::function< void() > & render_function );
+        void stop();
 
         static void error_callback( int error, const char * description );
 
@@ -29,7 +30,6 @@ namespace chess::display {
     private:
         std::string window_name;
 
-        void cleanup();
         void main_loop( std::function< void() > & render_function );
     };
 

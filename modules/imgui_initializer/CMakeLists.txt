@@ -1,11 +1,13 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(display LANGUAGES CXX)
+add_subdirectory("bindings")
+
+project(imgui_initializer LANGUAGES CXX)
 
 add_library(${PROJECT_NAME}
-    "include/display.hpp"
+    "include/imgui_initializer.hpp"
 
-    "src/display.cpp"
+    "src/imgui_initializer.cpp"
 )
 
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
@@ -20,5 +22,5 @@ target_include_directories(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME}
     PUBLIC
-    imgui_initializer
+    glfw_bindings
 )
