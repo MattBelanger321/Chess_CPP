@@ -4,6 +4,7 @@ glfw/3.4
 glew/2.2.0
 
 [generators]
+cmake_paths
 CMakeDeps
 CMakeToolchain
 cmake_find_package_multi
